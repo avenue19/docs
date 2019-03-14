@@ -431,6 +431,7 @@ By applying the ``CsrfProtectionMiddleware`` to routing scopes, you can include 
     // in config/routes.php
     Router::scope('/', function (RouteBuilder $routes) {
         $routes->applyMiddleware('csrf');
+        parent::routes($routes);
     });    
     
 
